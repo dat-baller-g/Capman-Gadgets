@@ -1,0 +1,73 @@
+Create the folder and start the next app using the create-next-app
+import the necessary dependencies
+Connect with sanity: use the sanity init to initialize
+                     follow the prompts and start
+                     go into the sanity folder created by sanity and create the necessary schema files; product and banner.js
+                     Create the lib folder in the root directory, in it, create the client.js file
+                     The client.js file connects the app with sanity.
+
+In the pages folder create the product folder which contains the [slug].js file which serves as the product details page for the particular product
+chosen.
+
+Export all the components and install as needed in the main index file:
+                                                                        Create an index file in the components folder.
+                                                                        export all the components as default from this folder
+                                                                        import wherever necessary.
+
+Fetch products data from sanity server:In the index file, below the Home component, write and export a function(getServerProps) 
+                                       to get the query from server ie sanityclient, check which type and render accordingly.
+                                       Pass these props into the home component as props and use them as needed.
+
+Create the products in the sanity studio.
+
+The Product component: Accept and destructure the props in the product component, 
+                       wrap in a link that directs to the product-details page. 
+
+The heroBanner component: Accept and destructure the props, repeat as above.
+
+The StateContext component: This is a customized hook like the useState to enable
+                            us use defined states all through the app. It takes all the states to be exported
+                            as props in a value attribute. To use this hook, in the appjs file, wrap the components in this hook.
+
+The onAdd function: This takes in 2 args; price and quantity
+                    check if product is in cart using the id,
+                    set the total price, and total quantities.
+                    If product is in cart, map through the cart items to get the particular product usingg the id
+                    and update the quantity.
+                    Else, update the cart items with the quantity and item.
+
+The onRemove function: This takes in the id as an arggument, 
+                       get this product and the index,
+                       filter out the removed product and store the rest in a new constant,
+                       set the cart items as this constant.
+                       set the total price and total quantities.
+
+The toggleCartItemQuantity: This takes in the id and value as arguments
+                            get the foundproduct, by mappin througgh to check for the id.
+                            get the index using the id as well.
+                            filter through the cart items, to store the other items in a const 
+                            check to see if the value is inc or dec,
+                            if it is an increase, set cart items to spread found product, updating the quantity,
+                            and the new cart items.
+                            Vice versa if it is a decrease.
+
+incQty function: return previous qty plus 1
+decQty: return previous qty - 1.
+
+The Cart component: This mostly displays all the states from the useStateContext hook. Also the checkoutfunction with stripe is declared
+                    here.
+
+The product details Component: On clicking the product card, the link should take you to the product details page of the particular product.
+                               This component takes 2 args; product and products, these are from the getServerSideProps function in the same 
+                               file which fetches data from the backend.
+                               Also therein is the getStaticProps function.
+                               The handleBuyNow component is also defined here.
+
+
+
+
+
+
+
+
+
