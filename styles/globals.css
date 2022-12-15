@@ -282,16 +282,16 @@ text-align: end;
 
   .hero-banner-image{
     position: static;
-    margin-top: 3%;
+    margin-top: 8%;
     width: 200%;
   }
 
-  /* .hero-banner-container .beats-solo {
-    font-size: 1.0rem;
+  .hero-banner-container .beats-solo {
+    font-size: 0.8rem;
   }
 
   .hero-banner-container h1{
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .hero-banner-container h2{
     font-size: 1.3rem;
@@ -299,7 +299,7 @@ text-align: end;
 
   .hero-banner-container h3{
     font-size: 1.3rem;
-  } */
+  }
 
 
 
@@ -309,7 +309,7 @@ text-align: end;
   }
 
   .layout{
-    padding: 30px;
+    padding: 20px;
   }
 
   /* .img-cont{
