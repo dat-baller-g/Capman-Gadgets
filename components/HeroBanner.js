@@ -23,20 +23,27 @@ const HeroBanner = ({heroBanner}) => {
 
   return (
     <div className='hero-banner-container'>
-        <p className='beats-solo'> {heroBanner.smallText} </p>
-        <h3> {heroBanner.midText} </h3>
-        <h1> {heroBanner.largeText1} </h1>
-        <h2> {heroBanner.largeText2} </h2>
-        <img src={urlFor(heroBanner.image[imageIndex])} alt="herobanner" className='hero-banner-image fade-in-image' />
-
-        <div>
-            <Link href={`/product/${heroBanner.product}`}>
+        <div className=''>
+          <p className='beats-solo txt-cont'> {heroBanner.smallText} </p>
+          <h3 className='txt-cont'> {heroBanner.midText} </h3>
+          <h1 className='txt-cont'> {heroBanner.largeText1} </h1>
+          <h2 className='txt-cont'> {heroBanner.largeText2} </h2>
+          <Link href={`/product/${heroBanner.product}`}>
                 <button type='button' className='btn-banner'> {heroBanner.buttonText} </button>
             </Link>
-            <div className='desc'>
+        </div>
+        <div className='img-cont'>
+          <img src={urlFor(heroBanner.image[imageIndex])} alt="herobanner" className='hero-banner-image fade-in-image' />
+          <div className='desc'>
                 <p>Description</p>
                 <h5>{heroBanner.desc}</h5>
             </div>
+        </div>
+        
+        
+        <div>
+            
+            
         </div>
 
     </div>
